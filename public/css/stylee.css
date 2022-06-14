@@ -151,6 +151,7 @@ article{
     flex-direction: row;
     justify-content: center;
     text-align: center;
+    align-items: center;
 }
 .pDeFooter{
     margin: 5px;
@@ -385,6 +386,19 @@ label{
             width: 100%;
             background-color: white;
 
+        }
+        .contenedorCarrusel{
+            margin: 0px 30px;
+        }
+
+        .pDelCarrusel{
+            color: black;
+            font-size: 19px;
+            font-weight: 600;
+        }
+        .titulos{
+            color: black;
+            font-size: 30px;
         }
 
 

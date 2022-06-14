@@ -1,61 +1,76 @@
+import Carousel from 'react-bootstrap/Carousel';
+import { Link } from "react-router-dom"
+// or less ideally
+//import { Carousel } from 'react-bootstrap';
 const HomePage = (props) => {
     return (
         <div>
             <main class="mainIndex">
-    <div class="carrusel">
-      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="img/F9-Poster.webp" class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block">
-              <h5 class="h5Carussel">Rapido y Furioso 9</h5>
-              <p class="PCarrusel">Dom Toretto y su equipo se unen para detener un complot del asesino más hábil y el
+   
+
+<div class="contenedorCarrusel">
+    <Carousel>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="img/portada-encantojpeg.webp"
+      alt="First slide"
+    />
+    <Carousel.Caption>
+      <h3  class="titulos">Encanto</h3>
+      <p class="pDelCarrusel">En lo alto de las montañas de Colombia hay un lugar encantado llamado Encanto. Aquí,
+                en una casa mágica, vive la extraordinaria familia Madrigal donde todos tienen habilidades fantásticas.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="img/F9-Poster.webp"
+      alt="Second slide"
+    />
+
+    <Carousel.Caption>
+      <h3  class="titulos">Rapido y Furioso 9</h3>
+      <p  class="pDelCarrusel">Dom Toretto y su equipo se unen para detener un complot del asesino más hábil y el
                 conductor más exitoso que jamás hayan conocido: el hermano abandonado de Dom.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="img/portada-para-la-caratula-de-el-hobbit-un-viaje-inesperado-original.jpg"
-              class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block">
-              <h5 class="h5Carussel">El Hoobit</h5>
-              <p class="PCarrusel">Dentro de dicha ficción, el argumento de El hobbit se sitúa en el año 2941 de la
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="img/portada-para-la-caratula-de-el-hobbit-un-viaje-inesperado-original.jpg"
+      alt="Third slide"
+    />
+
+    <Carousel.Caption>
+      <h3 class="titulos">El Hoobit</h3>
+      <p  class="pDelCarrusel">Dentro de dicha ficción, el argumento de El hobbit se sitúa en el año 2941 de la
                 Tercera Edad del Sol,​ y narra la historia del hobbit Bilbo Bolsón, que junto con el mago Gandalf y un
                 grupo de enanos, vive una aventura en busca del tesoro custodiado por el dragón Smaug en la Montaña
                 Solitaria.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="img/portada-encantojpeg.webp" class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block">
-              <h5 class="h5Carussel">Encanto</h5>
-              <p class="PCarrusel">En lo alto de las montañas de Colombia hay un lugar encantado llamado Encanto. Aquí,
-                en una casa mágica, vive la extraordinaria familia Madrigal donde todos tienen habilidades fantásticas.
-              </p>
-            </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </div>
+    </Carousel.Caption>
+  </Carousel.Item>
+</Carousel>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="Destacados-Y-Novedades-General">
 
       <h2 class="DYN">Destacados</h2>
 
 
       <div class="card-deck">
-        <div class="card"><a href="./detaill.html">
+        <div class="card"><Link to="/detalle">
           <div class="ImgCard"><img src="img/spidermanNWH.jpg.webp" class="card-img-top" alt="..." /></div>
           <div class="card-body">
             <h5 class="card-title">Spider man no way home</h5>
@@ -65,9 +80,9 @@ const HomePage = (props) => {
             </p>
             <p>Estreno : </p>
             <p class="card-text"><small class="text-muted">16 de diciembre de 2021</small></p>
-          </div></a>
+          </div></Link>
         </div>
-        <div class="card"><a href="./detaill.html">
+        <div class="card"><Link to="/detalle">
           <div class="ImgCard"> <img src="img/PorqueSoyBatman.jpg" class="card-img-top" alt="..." /></div>
           <div class="card-body">
             <h5 class="card-title">The Batman</h5>
@@ -78,9 +93,9 @@ const HomePage = (props) => {
               .</p>
             <p>Estreno : </p>
             <p class="card-text"><small class="text-muted">17 de abril de 2022 </small></p>
-          </div></a>
+          </div></Link>
         </div>
-        <div class="card"><a href="./detaill.html">
+        <div class="card"><Link to="/detalle">
           <div class="ImgCard"><img src="img/venom.jpg" class="card-img-top" alt="..." /></div>
           <div class="card-body">
             <h5 class="card-title">Venom</h5>
@@ -89,9 +104,9 @@ const HomePage = (props) => {
               formas de vida alienígena, hará todo lo posible por sacar a la luz este tipo de excesos.</p>
             <p>Estreno : </p>
             <p class="card-text"><small class="text-muted">5 de octubre de 2018</small></p>
-          </div></a>
+          </div></Link>
         </div>
-        <div class="card"><a href="./detaill.html">
+        <div class="card"><Link to="/detalle">
           <div class="ImgCard"><img src="img/proyecto rampage.jfif" class="card-img-top" alt="..." /></div>
           <div class="card-body">
             <h5 class="card-title">Proyecto rampage</h5>
@@ -99,9 +114,9 @@ const HomePage = (props) => {
             </p>
             <p>Estreno : </p>
             <p class="card-text"><small class="text-muted">13 de abril de 2018</small></p>
-          </div></a>
+          </div></Link>
         </div>
-        <div class="card"><a href="./detaill.html">
+        <div class="card"><Link to="/detalle">
           <div class="ImgCard"><img src="img/el 50 puntos para grifindor.jfif" class="card-img-top" alt="..." /></div>
           <div class="card-body">
             <h5 class="card-title">Animales fantásticos: los secretos de dumbledore</h5>
@@ -109,7 +124,7 @@ const HomePage = (props) => {
             </p>
             <p>Estreno : </p>
             <p class="card-text"><small class="text-muted">14 de abril de 2022</small></p>
-          </div></a>
+          </div></Link>
         </div>
       </div>
     </div>
@@ -120,7 +135,7 @@ const HomePage = (props) => {
       <h2 class="DYN">Novedades</h2>
 
       <div class="card-deck">
-        <div class="card"><a href="./detaill.html">
+        <div class="card"><Link to="/detalle">
           <div class="ImgCard"><img src="img/Avatar 2.jfif" class="card-img-top" alt="..." /></div>
           <div class="card-body">
             <h5 class="card-title">Avatar 2</h5>
@@ -130,9 +145,9 @@ const HomePage = (props) => {
             </p>
             <p>Estreno : </p>
             <p class="card-text"><small class="text-muted">16 de diciembre de 2022</small></p>
-          </div></a>
+          </div></Link>
         </div>
-        <div class="card"><a href="./detaill.html">
+        <div class="card"><Link to="/detalle">
           <div class="ImgCard"><img src="img/Uncharted-pelicula.webp" class="card-img-top" alt="..." /></div>
           <div class="card-body">
             <h5 class="card-title">Uncharted: Fuera del mapa</h5>
@@ -142,9 +157,9 @@ const HomePage = (props) => {
             </p>
             <p>Estreno : </p>
             <p class="card-text"><small class="text-muted">17 de febrero de 2022</small></p>
-          </div></a>
+          </div></Link>
         </div>
-        <div class="card"><a href="./detaill.html">
+        <div class="card"><Link to="/detalle">
           <div class="ImgCard"><img src="img/El_hombre_del_norte-710039658-large.jpg" class="card-img-top" alt="..." /></div>
           <div class="card-body">
             <h5 class="card-title">The Northman</h5>
@@ -155,9 +170,9 @@ const HomePage = (props) => {
             </p>
             <p>Estreno : </p>
             <p class="card-text"><small class="text-muted">21 de abril de 2022</small></p>
-          </div></a>
+          </div></Link>
         </div>
-        <div class="card"><a href="./detaill.html">
+        <div class="card"><Link to="/detalle">
           <div class="ImgCard"><img src="img/doctor strange in the multiverse of madness.jfif" class="card-img-top" alt="..." /></div>
           <div class="card-body">
             <h5 class="card-title">Doctor strange in the multiverse of madness</h5>
@@ -166,9 +181,9 @@ const HomePage = (props) => {
             </p>
             <p>Estreno : </p>
             <p class="card-text"><small class="text-muted">5 de mayo de 2022</small></p>
-          </div></a>
+          </div></Link>
         </div>
-        <div class="card"><a href="./detaill.html">
+        <div class="card"><Link to="/detalle">
           <div class="ImgCard"><img src="img/El_Exorcismo_de_Dios_-_Poster.webp" class="card-img-top" alt="..." /></div>
           <div class="card-body">
             <h5 class="card-title">El exorcismo de Dios
@@ -178,7 +193,7 @@ const HomePage = (props) => {
             </p>
             <p>Estreno : </p>
             <p class="card-text"><small class="text-muted">17 de febrero de 2022</small></p>
-          </div></a>
+          </div></Link>
         </div>
       </div>
     </div>

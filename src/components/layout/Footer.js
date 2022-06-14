@@ -1,4 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookSquare, faInstagram, faTwitter} from '@fortawesome/free-brands-svg-icons'
 
 const Footer = (props) => {
     return (
@@ -18,16 +19,18 @@ const Footer = (props) => {
         <article>
           <p class="pDeFooter">Numero De Telefono : 23456122</p>
         </article>
-        <article> <FontAwesomeIcon icon="fa-brands fa-facebook-square" className="line-height: 2; color: rgb(219, 149, 221);"/>
+        <article > <FontAwesomeIcon icon={faInstagram} style={{lineHeight: 2  , color: "rgb(219, 149, 221)"}}/>
           <p class="pDeFooter">Instagram : PeliMax007</p>
         </article>
-        <article><FontAwesomeIcon icon="fa-brands fa-instagram" className="line-height: 2; color: blue;"/>
+        <article><FontAwesomeIcon icon={faFacebookSquare}style={{lineHeight: 2, color: "blue"}}/>
       
 
           <p class="pDeFooter">facebook : PeliMax</p>
         </article>
-        <article><FontAwesomeIcon icon="fa-brands fa-twitter"  className="line-height: 2; color: rgb(84, 184, 230);" />
-          <p>Twitter : PeliMaxima</p>
+        <article>
+          
+        <FontAwesomeIcon icon={faTwitter}  style={{lineHeight: 2, color: "rgb(84, 184, 230)"}} />
+          <p class="pDeFooter">Twitter : PeliMaxima</p>
         </article>
       </section>
     </div>

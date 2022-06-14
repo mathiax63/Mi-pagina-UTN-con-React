@@ -1,10 +1,11 @@
 import './App.css';
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import Head from './components/layout/Head';
 import Header from './components/layout/Header';
 import Nav from './components/layout/Nav';
 import Footer from './components/layout/Footer';
+
 import HomePage from './pages/HomePage';
 import Administrador from './pages/Admin';
 import PaginaParaVer from './pages/PaginaParaVer';
@@ -18,6 +19,7 @@ function App() {
     <div className="App">
       <Head/>
       <Header></Header>
+      
       <BrowserRouter>
       <Nav/>
       <Routes>
